@@ -1,7 +1,15 @@
 # Ohjelmistotekniikka, harjoitustyö
 
-Tämä projekti on _harjoitus TKT20018-kurssille_, rakennan [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) -simulaattorin jossa käyttäjä voi **ajaa simulaatiota, rakentaa uudelleenkäytettäviä palikoita ja tallentaa edistymisen tietokantaan**.
+Tämä projekti on _harjoitus TKT20018-kurssille_, rakennan [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) -simulaattorin jossa käyttäjä voi **piirtää simuloitavia maailmoja ja hallita simulaatiota**.
 
 ## Laskarit
 
 [Laskarit löytyvät täältä.](./laskarit)
+
+## Vaatimusmäärittely
+
+[Vaatimusmäärittely löytyy täältä.](./dokumentaatio/vaatimusmaarittely.md)
+
+## Tuntikirjanpito
+
+[Tuntikirjanpito löytyy täältä.](./dokumentaatio/tuntikirjanpito.md)

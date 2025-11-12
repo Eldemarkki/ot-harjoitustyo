@@ -4,7 +4,7 @@ def create_empty_2d_array(rows, columns):
 def parse_pattern(pattern):
     cells_to_enable = []
 
-    for row_index, row in enumerate(pattern.splitlines):
+    for row_index, row in enumerate(pattern.splitlines()):
         for column_index, column in enumerate(row):
             if column == "#":
                 cells_to_enable.append([column_index, row_index])

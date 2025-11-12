@@ -22,4 +22,7 @@ class GameOfLifeRenderer:
         
         # Draw grid
         self._grid_renderer.render()
+    
+    def get_cell_from_mouse_position(self, mouse_pos):
+        return (mouse_pos[0] // CELL_SIZE, mouse_pos[1] // CELL_SIZE)
 

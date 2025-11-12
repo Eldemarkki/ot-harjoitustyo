@@ -94,3 +94,6 @@ class GameOfLife:
                 text += "\n"
         
         return text
+    
+    def toggle_cell(self, x, y):
+        self._cells[y][x] = not self.get_cell(x, y)

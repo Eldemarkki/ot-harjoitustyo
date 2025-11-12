@@ -84,3 +84,14 @@ class TestGameOfLife(unittest.TestCase):
             .....###..
             ..........
             .........."""))
+        
+    def test_can_toggle_cell(self):
+        x = 3
+        y = 2
+        
+        self.assertEqual(self.game.get_cell(x, y), False)
+        self.game.toggle_cell(x, y)
+        self.assertEqual(self.game.get_cell(x, y), True)
+        self.game.toggle_cell(x, y)
+        self.assertEqual(self.game.get_cell(x, y), False)
+        

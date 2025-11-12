@@ -9,8 +9,11 @@ class GameLoop():
         self._display = display
         self._paused = False
 
-        def toggle_pause():
-            self._paused = not self._paused
+        def toggle_pause(new_state: bool | None = None):
+            if new_state is None:
+                self._paused = not self._paused
+            else:
+                self._paused = new_state
 
         self._renderer = GameOfLifeRenderer(self._game, self._display, on_pause=toggle_pause)
 

@@ -6,11 +6,12 @@ from ui.button import Button
 CELL_SIZE = 20
 
 class GameOfLifeRenderer:
-    def __init__(self, game: GameOfLife, display, on_pause=None):
+    def __init__(self, game: GameOfLife, display, on_pause):
         self._game = game
         self._display = display
         self._grid_renderer = GridRenderer(display, game, CELL_SIZE)
         self._font = pygame.font.SysFont('Arial', 20)
+        self._on_pause = on_pause
 
         info = pygame.display.Info()
         width = info.current_w
@@ -45,7 +46,10 @@ class GameOfLifeRenderer:
 
         cell_coordinates = self._get_cell_from_mouse_position(pos)
         self._game.toggle_cell(cell_coordinates[0], cell_coordinates[1])
-   
+
+        # Toggling a cell should pause the simulation
+        self._on_pause(True)
+
     def _get_cell_from_mouse_position(self, mouse_pos):
         return (mouse_pos[0] // CELL_SIZE, mouse_pos[1] // CELL_SIZE)
 

@@ -4,9 +4,8 @@ from ui.game_of_life_renderer import GameOfLifeRenderer
 class GameLoop():
     def __init__(self, game, display):
         self._clock = pygame.time.Clock()
-        self._renderer = GameOfLifeRenderer()
+        self._renderer = GameOfLifeRenderer(game, display)
         self._game = game
-        self._display = display
 
     def run(self):
         while True:
@@ -14,7 +13,7 @@ class GameLoop():
                 if event.type == pygame.QUIT:
                     return
             
-            self._renderer.render(self._game, self._display)
+            self._renderer.render()
             pygame.display.update()
 
             self._game.simulate()
